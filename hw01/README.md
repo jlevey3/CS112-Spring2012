@@ -1,13 +1,14 @@
 ===========================
 Homework 1
-===========================
-Setting Up Git/Github
----------------------------
+--------------------------
 
-Make sure to follow the instructions to [setup git/github.com](https://github.com/HampshireCS/CS112-Spring2012/wiki/Instructions).  Once you have setup git and your own fork of the course repository, simply modify the README file in the root directory with the following:
+* Name: Josh Levey
+ * Programming Background: I've taken CS-106, a basic webdesign class that provided a general overview of HTML, 
+CSS and Javascript. We also reviewed a little bit of JQuery. 
+I also took CS-206, Building Web Applications, a python-based server side web application course. 
+I've been teaching myself a little bit of python but I am still on the beginner level.
+ * What you hope to get from the course: I really hope that I'm able to get into this course, as I'm currently on
+ the waitlist. I hope that in taking this course I'll have a basic understanding of the Python coding language and that 
+I'll be through taking this I'll be able to design and implement programs of my own. 
 
- * Name
- * Programming Background
- * What you hope to get from the course
 
-Then, [turnin](https://github.com/HampshireCS/CS112-Spring2012/wiki/Instructions-Turnin) the homework.
