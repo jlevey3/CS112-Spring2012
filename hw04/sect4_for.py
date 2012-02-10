@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-#ONLY ADVANCED IS INCOMPLETE
 from hwtools import *
 
 print "Section 4:  For Loops"
@@ -41,7 +40,11 @@ for i in range(1,100,2):
 	print i
 
 # 5. [ADVANCED]  Multiply each element in nums by its index
+index=0
 print "5.",
 for num in nums:
-	num*list.index(num)
+	print num*index
+	index+=1
+
+	
 	
