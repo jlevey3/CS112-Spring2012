@@ -41,4 +41,7 @@ for i in range(1,100,2):
 	print i
 
 # 5. [ADVANCED]  Multiply each element in nums by its index
-print "5.", __
+print "5.",
+for num in nums:
+	num*[:]
+	
