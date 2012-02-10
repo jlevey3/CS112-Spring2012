@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#ONLY ADVANCED IS INCOMPLETE
 from hwtools import *
 
 print "Section 4:  For Loops"
@@ -23,13 +24,12 @@ for num in nums:
 print evens
 
 # 3. Does nums only contain even numbers? 
-#Note: I found this a bit tricky...it seemed that if the only_even was set to False before the if statement (ie. global variable)
-#that it would retain its falseness even if the statement was true because the if statement ended and it was set to a local var ...
 only_even=True
 print "3.",
 for num in nums:
 	if num%2==1:
-		only_even==False
+		only_even=False
+
 if only_even == True:
     	print "only even"
 elif only_even == False:
@@ -43,5 +43,5 @@ for i in range(1,100,2):
 # 5. [ADVANCED]  Multiply each element in nums by its index
 print "5.",
 for num in nums:
-	num*[num:nums]
+	num*list.index(num)
 	
