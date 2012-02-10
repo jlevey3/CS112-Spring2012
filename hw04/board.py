@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #Filename: board.py
-
+#THIS IS INCOMPLETE
 b = "-"
 w = "#"
 height=int(raw_input("Please enter your checkerboard height: "))
