@@ -4,14 +4,13 @@
 b = "-"
 w = "#"
 height=int(raw_input("Please enter your checkerboard height: "))
-width=int(raw_input("Please enter your checkerboard width: "))
+width=int(raw_input("Please enter your checkerboard width (please user an even #): "))
 heights=0
 widths=0
 
-while heights<height:
+while heights!=height:
 		print (b+w)*(width/2)
-		print (b+w)*(height)
-		widths+=1
 		heights+=1
-		if widths==width:
-			break
+		if widths!=width:
+			print (w+b)*(width/2)
+			widths+=1

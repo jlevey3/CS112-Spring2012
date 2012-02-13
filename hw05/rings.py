@@ -30,7 +30,11 @@ screen.fill(WHITE)
 ##  and arc.  Also, the width
 ##  parameter
 #################################
-
+pygame.draw.circle(screen,BLUE,(200,150), 110, 20)
+pygame.draw.circle(screen,BLACK,(440,150), 110, 20)
+pygame.draw.circle(screen,RED,(680,150), 110, 20)
+pygame.draw.circle(screen,YELLOW,(320,260), 110, 20)
+pygame.draw.circle(screen,GREEN,(560,260), 110, 20)
 
 ## Loop
 clock = pygame.time.Clock()
