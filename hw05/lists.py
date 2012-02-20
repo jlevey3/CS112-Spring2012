@@ -39,12 +39,9 @@ for x in raw_input("Please enter a list of words seperated by commas: ").split("
 	words.append(len(x))
 print words
 # 4.  Create a list of every multiple of 3 between 1 and 100 with their 
-#     index FIX this- TRY ENUMERATE FUNCTION
+#     index 
 #        ex:  [ [0,3], [1,6], [2,9]...]
-print "4.", #[[x,y] for x in range(0,33) 
-#for y in range(3,101,3)]
-#if x==y.index(y)
-
+print "4.", #[[i,i*3] for i in range 33]
 
 # 5. create a list of every card in a deck of cards 
 print "5.", [[x,y] for x in ["Spades","Hearts","Diamonds","Clubs"]

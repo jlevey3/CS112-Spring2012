@@ -8,21 +8,25 @@ I used the Iterative implementation from here:
 """
 from hwtools import input_nums
 
-nums=inputNums()
-sorted(nums)
-print "I have sorted your numbers"
-x=raw_input("Which number should I find: ")
-m=1
-M=len(nums)-1
-while M>=m:
-    md=M+m/2
-    if nums[md]==x:
+nums=input_nums()
+print "I will now sort your numbers"
+nums = sorted(nums)
+print nums
+
+x=int(raw_input("Which number should I find: "))
+low=0
+high=len(nums)-1
+
+while high >= low:
+    mid = (high + low) / 2
+    if x>nums[mid]:
+        low=mid+1
+    elif x<nums[mid]:
+        high = mid-1
+    else:
         break
-    elif x>nums[md]:
-       m=md+1
-     else:
-        M-=1
-if nums[md]=x:
-    print "Found", x "at", md
-else
+
+if nums[mid]==x:
+    print "Yay. We found", x,"at", mid
+else:
     print "Could not find", x
