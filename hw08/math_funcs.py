@@ -9,7 +9,12 @@ import math
 #      >>> distance((0,0), (3,4))
 #      5
 
-# def distance(a, b):
+def distance(a, b):
+	ax, ay = a
+        bx, by = b
+	x = bx - ax
+	y = by - ay
+	return math.sqrt(x**2 + y**2)
 
 
 # ADVANCED
