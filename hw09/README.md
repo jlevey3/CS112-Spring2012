@@ -19,7 +19,7 @@ This weekend, take a stab at programming the game [tron](http://www.classicgames
  * the way you draw and track each player should be the same.  You could probably do some functions.
  * you can create constants that can make life easier:
  * if you store points in a list, you can probably check to see if a point is already there with `in`.
-
+wh
 ```python
 RED = 255,0,0
 
