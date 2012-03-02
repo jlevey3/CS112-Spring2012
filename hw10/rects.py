@@ -34,7 +34,13 @@ from pygame import Rect
 
 def poly_in_rect(poly, rect):
     "check if polygon is within rectangle"
-
+	inside = False
+    for (x,y) in poly:
+		if rect.collidepoint((x,y)):
+			inside = True
+		else:
+			inside = False
+	return inside
 
 
 # 2. surround_poly
@@ -45,6 +51,18 @@ def poly_in_rect(poly, rect):
 #      returns:  pygame.Rect
 
 def surround_poly(poly):
-    "create a rectangle which surounds a polygon"
-
+    "create a rectangle which surrounds a polygon"
+	xmin, ymin = xmax, ymax = poly[0]
+	for point in poly:
+		x,y = point
+		
+		if x<=xmin:
+			x=xmin
+		if x>=xmax:
+			x=xmax
+		if y<=ymin:
+			y=ymin
+		if y>=ymax:
+			y=ymax
+		return Rect(xmin,ymin,(xmax-xmin+1),(ymax-ymin+1))
 
