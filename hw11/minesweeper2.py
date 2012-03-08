@@ -17,7 +17,7 @@ C_FLAG = 50,32,111
 
 def clearSquare(world,x,y):
     world[x][y]["cleared"] = True
-	return world[x][y]["bomb"]
+    return world[x][y]["bomb"]
 	
 def flagSquare(world,x,y):
 	world[x][y]["flagged"] = not world[x][y]["flagged"]
@@ -59,7 +59,7 @@ def game(tile,width,height,numBombs):
     #init - window size = width*tile
     screen = pygame.display.set_mode((width*tile, height*tile))
     font = pygame.font.Font(None, tile)
-	numFlag = numBombs
+    numFlag = numBombs
     #this will store all of the game data...now every tile will have its own dict that will store its information
     world = []
     for x in range(width):
@@ -105,7 +105,7 @@ def game(tile,width,height,numBombs):
     rmbClicked = False
     actionClearSquare = False
     actionFlagSquare = False
-	gameOver = False
+    gameOver = False
 
     while not done:
         #input
@@ -131,22 +131,22 @@ def game(tile,width,height,numBombs):
             x,y = pygame.mouse.get_pos()
             x /= tile
             y /= tile
-			if not world[x][y]["flagged"]:
-            	gameOver = clearSquare(world,x,y)
+      	if not world[x][y]["flagged"]:
+            gameOver = clearSquare(world,x,y)
             actionClearSquare = False
 			
-		if actionFlagSquare:
-			x,y = pygame.mouse.get_pos()
-			x /= tile
-			y /= tile
-			if numFlag > 0 and not world[x][y]["flagged"]:
-				world[x][y]["flagged"]=True
-				numFlag-=1
-			elif world[x][y]["flagged"]:
-				world[x][y]["flagged"]=False
-				numFlag+=1
+       	if actionFlagSquare:
+         	x,y = pygame.mouse.get_pos()
+	       	x /= tile
+	       	y /= tile
+	       	if numFlag > 0 and not world[x][y]["flagged"]:
+		       	world[x][y]["flagged"]=True
+		       	numFlag-=1
+                elif world[x][y]["flagged"]:
+                    world[x][y]["flagged"]=False
+                    numFlag+=1
 			
-			actionFlagSquare = False
+                actionFlagSquare = False
 			
 		if gameOver:
 			for x in range(width):
