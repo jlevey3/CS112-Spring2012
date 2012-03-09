@@ -30,7 +30,23 @@
 #    >>> print a.distance(b)
 #    5
 #
+import math
 
+class Point(object):
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+    def distance(self, other):
+        return math.sqrt(((other.x - self.x)**2) + ((other.y - self.y)**2))
+    
+    def move(self, x, y):
+        self.x = x
+        self.y = y
+        
+    def translate(self, x, y):
+        self.x += x
+        self.y += y
 
 # Advanced Section:
 # ---------------------------------------
