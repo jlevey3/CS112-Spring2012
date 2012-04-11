@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+#GALAGA!!!!!
 from random import randrange
 import pygame, math, random
 from pygame.locals import *
@@ -18,7 +18,7 @@ def main():
     bounds = screen.get_rect()
 
     #initialize game
-    player = Player(bounds.center, bounds) #sets starting position fir player
+    Player = Player(bounds.center, bounds) #sets starting position fir player
     player_grp = GroupSingle(player)
     enemies = Group()
     spawn_counter = 0 
