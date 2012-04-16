@@ -150,12 +150,58 @@ class QuadTreeNode(object):
         else:
             self.se.add_point(point)
 
-    # def get_points(self):
-    
+    def get_points(self):
+        totalPoints = []
+        if self.data is not None:
+            totalPoints.append(self.data)
+         
+        if self.nw and self.nw.data is not None:
+            for point in self.nw.get_points():
+                if point != self.data:
+                    totalPoints.append(point)
 
-    # def get_rects(node, rects=None):
-    #   if rects is None:
-    #       rects = []
+        if self.ne and self.ne.data is not None:        
+            for point in self.ne.get_points():
+                if point != self.data:
+                    totalPoints.append(point)
+                 
+        if self.sw and self.sw.data is not None:
+            for point in self.sw.get_points():
+                if point != self.data:
+                    totalPoints.append(point)
+
+        if self.se and self.se.data is not None:
+            for point in self.se.get_points():
+                if point != self.data:
+                    totalPoints.append(point)
+
+        return totalPoints
+
+    def get_rects(self):
+        totalRects = []
+        totalRects.append(self.rect)
+
+        if self.nw is not None:
+            for rect in self.nw.get_rects():
+                if not rect in totalRects:
+                    totalRects.append(rect)
+        
+        if self.ne is not None:
+            for rect in self.ne.get_rects():
+                if not rect in totalRects:
+                    totalRects.append(rect)
+                     
+        if self.sw is not None:
+            for rect in self.sw.get_rects():
+                if not rect in totalRects:
+                    totalRects.append(rect)
+     
+        if self.se is not None:
+            for rect in self.se.get_rects():
+                if not rect in totalRects:
+                    totalRects.append(rect)
+                 
+        return totalRects
 
 
     # Advanced
